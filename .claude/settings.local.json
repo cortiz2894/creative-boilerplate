@@ -8,7 +8,8 @@
       "Bash(pnpm add:*)",
       "Bash(curl:*)",
       "Bash(pnpm list:*)",
-      "Bash(npx next build:*)"
+      "Bash(npx next build:*)",
+      "Bash(npm run build:*)"
     ]
   }
 }
