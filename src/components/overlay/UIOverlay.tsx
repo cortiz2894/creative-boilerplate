@@ -2,7 +2,6 @@
 
 import type { SceneMode } from "@/components/playground/SceneContent";
 import OverlayHeader from "./OverlayHeader";
-import OverlayCornerMarks from "./OverlayCornerMarks";
 
 export default function UIOverlay({ mode }: { mode: SceneMode }) {
   return (
@@ -15,7 +14,6 @@ export default function UIOverlay({ mode }: { mode: SceneMode }) {
       }}
     >
       <OverlayHeader mode={mode} />
-      {/* <OverlayCornerMarks /> */}
     </div>
   );
 }

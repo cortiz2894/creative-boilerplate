@@ -1,36 +1,99 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Creative Boilerplate
 
-## Getting Started
+A modern creative development boilerplate built with Next.js, Three.js, and React Three Fiber.  
+This repository is my personal production-ready setup for building interactive 3D experiences, experiments, and client projects.
 
-First, run the development server:
+It includes a fully integrated **3D Playground** to quickly prototype scenes, test lighting setups, import GLB models, and iterate visually in real time.
+
+![Next.js](https://img.shields.io/badge/Next.js-16.1-black?style=flat-square&logo=next.js)
+![Three.js](https://img.shields.io/badge/Three.js-0.182-black?style=flat-square&logo=three.js)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=flat-square&logo=typescript)
+
+---
+
+## ✨ What is this?
+
+**Creative Boilerplate** is the exact foundation I use for:
+
+- Client 3D experiences  
+- Interactive landing pages  
+- Creative coding experiments  
+- WebGL playgrounds  
+- Real-time shader explorations  
+
+This project is in **constant active development**, meaning dependencies and technologies are kept up to date. You can rely on this setup being aligned with the current ecosystem standards.
+
+---
+
+## 🎮 3D Playground
+
+A built-in development environment designed for rapid iteration and scene exploration.
+
+### Features
+
+- Orbit camera controls
+- Real-time light manipulation
+- Environment / HDRI support
+- Shadow configuration
+- GLB model import & preview
+- Transform controls (position, rotation, scale)
+- Live parameter tweaking via GUI
+
+The playground allows you to quickly test lighting setups, validate models, explore materials, and prototype interactions before moving into production code.
+
+---
+
+## 🛠 Tech Stack
+
+- **Framework:** Next.js 16.1 (App Router)
+- **3D/WebGL:** Three.js, React Three Fiber
+- **Animation:** GSAP
+- **Styling:** Tailwind CSS 4
+- **Controls:** Leva (GUI controls)
+- **Icons:** Lucide React
+- **Language:** TypeScript
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18+
+- pnpm (recommended) or npm
+
+### Installation
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+# Clone the repository
+git clone https://github.com/cortiz2894/creative-boilerplate.git
+
+# Navigate to the project
+cd creative-boilerplate
+
+# Install dependencies
+pnpm install
+
+# Start the development server
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the effects.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 👨‍💻 Author
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+**Christian Ortiz** - Creative Developer
 
-## Learn More
+## 🔗 Connect with me
 
-To learn more about Next.js, take a look at the following resources:
+- **Portfolio:** [cortiz.dev](https://cortiz.dev)
+- **YouTube:** [@cortizdev](https://youtube.com/@cortizdev)
+- **X (Twitter):** [@cortiz2894](https://twitter.com/cortiz2894)
+- **LinkedIn:** [Christian Daniel Ortiz](https://linkedin.com/in/christian-daniel-ortiz)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📬 Contact
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+For inquiries, collaborations or questions: **cortiz2894@gmail.com**
+---
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+⭐ If you found this useful, consider subscribing to my [YouTube channel](https://youtube.com/@cortizdev) for more creative development content!

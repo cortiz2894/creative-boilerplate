@@ -7,7 +7,6 @@ import { LEVA_THEME } from "@/components/shared/theme";
 import SceneContent from "./SceneContent";
 import type { SceneMode } from "./SceneContent";
 import UIOverlay from "@/components/overlay/UIOverlay";
-import GrainOverlay from "@/components/overlay/GrainOverlay";
 import OverlayButtons from "@/components/overlay/OverlayButtons";
 import LoadingOverlay from "@/components/overlay/LoadingOverlay";
 
@@ -75,7 +74,6 @@ export default function PlaygroundCanvas() {
         onClearGlb={handleClearGlb}
       />
       <LoadingOverlay visible={isLoadingModel} />
-      <GrainOverlay />
     </>
   );
 }
