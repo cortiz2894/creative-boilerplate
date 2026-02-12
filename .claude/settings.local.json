@@ -1,7 +1,13 @@
 {
   "permissions": {
     "allow": [
-      "Bash(find:*)"
+      "Bash(find:*)",
+      "Bash(kill:*)",
+      "Bash(npx tsc:*)",
+      "Bash(node -e:*)",
+      "Bash(pnpm add:*)",
+      "Bash(curl:*)",
+      "Bash(pnpm list:*)"
     ]
   }
 }
