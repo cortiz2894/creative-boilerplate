@@ -26,10 +26,10 @@ export default function SceneContent({ showGrid, mode, glbUrl, onModelLoaded }: 
       {showGrid && <GridFloor mode={mode} />}
       {glbUrl ? (
         <Suspense fallback={null}>
-          <GlbModel url={glbUrl} onLoaded={onModelLoaded} />
+          <GlbModel url={glbUrl} onLoaded={onModelLoaded} mode={mode} />
         </Suspense>
       ) : (
-        <DemoSphere />
+        <DemoSphere mode={mode} />
       )}
     </>
   );

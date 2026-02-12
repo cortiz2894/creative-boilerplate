@@ -37,7 +37,7 @@ export default function PlaygroundCanvas() {
 
   const { mode } = useControls("Scene", {
     mode: {
-      value: "Frame" as SceneMode,
+      value: "Background" as SceneMode,
       options: ["Background", "Frame"] as SceneMode[],
       label: "Mode",
     },

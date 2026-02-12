@@ -6,7 +6,7 @@ import { OrbitControls } from "@react-three/drei";
 import { useControls, folder, button } from "leva";
 import { MathUtils, Vector3 } from "three";
 
-const DEFAULT_POS: [number, number, number] = [8, 1.5, 8];
+const DEFAULT_POS: [number, number, number] = [8, 3.5, 8];
 
 export default function SceneCamera() {
   const controlsRef = useRef(null);

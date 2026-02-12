@@ -4,15 +4,18 @@ import { useMemo, useEffect } from "react";
 import { useGLTF } from "@react-three/drei";
 import { useControls, folder } from "leva";
 import { Box3, Vector3, MathUtils } from "three";
-import type { Mesh } from "three";
+import type { Mesh, MeshStandardMaterial } from "three";
+import type { SceneMode } from "./SceneContent";
 
 interface GlbModelProps {
   url: string;
   onLoaded?: () => void;
+  mode: SceneMode;
 }
 
-export default function GlbModel({ url, onLoaded }: GlbModelProps) {
+export default function GlbModel({ url, onLoaded, mode }: GlbModelProps) {
   const { scene } = useGLTF(url);
+  const wireframe = mode === "Frame";
 
   useEffect(() => {
     onLoaded?.();
@@ -40,6 +43,19 @@ export default function GlbModel({ url, onLoaded }: GlbModelProps) {
 
     return s;
   }, [scene]);
+
+  useEffect(() => {
+    scene.traverse((child) => {
+      if ((child as Mesh).isMesh) {
+        const mat = (child as Mesh).material;
+        if (Array.isArray(mat)) {
+          mat.forEach((m) => { (m as MeshStandardMaterial).wireframe = wireframe; });
+        } else {
+          (mat as MeshStandardMaterial).wireframe = wireframe;
+        }
+      }
+    });
+  }, [scene, wireframe]);
 
   const { scale, posX, posY, posZ, rotX, rotY, rotZ } = useControls("Model", {
     Transform: folder(

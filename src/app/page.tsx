@@ -65,8 +65,8 @@ export default function Home() {
       )
       .from(split.chars, {
         opacity: 0,
-        duration: 0.03,
-        stagger: 0.02,
+        duration: 0.02,
+        stagger: 0.015,
       })
       .from(
         buttonsRef.current,
@@ -104,7 +104,7 @@ export default function Home() {
       {/* Video */}
       <div ref={frameRef} className={styles.frame}>
         <video
-          src="/assets/creative-boilerplate.mp4"
+          src="/assets/creative-boilerplate-2.mp4"
           autoPlay
           muted
           loop
