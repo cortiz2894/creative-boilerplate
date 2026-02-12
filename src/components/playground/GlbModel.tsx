@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo } from "react";
+import { useMemo, useEffect } from "react";
 import { useGLTF } from "@react-three/drei";
 import { useControls, folder } from "leva";
 import { Box3, Vector3, MathUtils } from "three";
@@ -8,10 +8,15 @@ import type { Mesh } from "three";
 
 interface GlbModelProps {
   url: string;
+  onLoaded?: () => void;
 }
 
-export default function GlbModel({ url }: GlbModelProps) {
+export default function GlbModel({ url, onLoaded }: GlbModelProps) {
   const { scene } = useGLTF(url);
+
+  useEffect(() => {
+    onLoaded?.();
+  }, [scene, onLoaded]);
 
   const autoScale = useMemo(() => {
     const box = new Box3().setFromObject(scene);

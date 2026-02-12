@@ -14,9 +14,10 @@ interface SceneContentProps {
   showGrid: boolean;
   mode: SceneMode;
   glbUrl: string | null;
+  onModelLoaded?: () => void;
 }
 
-export default function SceneContent({ showGrid, mode, glbUrl }: SceneContentProps) {
+export default function SceneContent({ showGrid, mode, glbUrl, onModelLoaded }: SceneContentProps) {
   return (
     <>
       <SceneCamera />
@@ -25,7 +26,7 @@ export default function SceneContent({ showGrid, mode, glbUrl }: SceneContentPro
       {showGrid && <GridFloor mode={mode} />}
       {glbUrl ? (
         <Suspense fallback={null}>
-          <GlbModel url={glbUrl} />
+          <GlbModel url={glbUrl} onLoaded={onModelLoaded} />
         </Suspense>
       ) : (
         <DemoSphere />

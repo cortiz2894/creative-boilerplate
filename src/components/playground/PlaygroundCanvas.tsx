@@ -9,18 +9,25 @@ import type { SceneMode } from "./SceneContent";
 import UIOverlay from "@/components/overlay/UIOverlay";
 import GrainOverlay from "@/components/overlay/GrainOverlay";
 import OverlayButtons from "@/components/overlay/OverlayButtons";
+import LoadingOverlay from "@/components/overlay/LoadingOverlay";
 
 export default function PlaygroundCanvas() {
   const [showGrid, setShowGrid] = useState(true);
   const [hideLeva, setHideLeva] = useState(false);
   const [glbUrl, setGlbUrl] = useState<string | null>(null);
+  const [isLoadingModel, setIsLoadingModel] = useState(false);
   const glbUrlRef = useRef<string | null>(null);
 
   const handleLoadGlb = useCallback((file: File) => {
     if (glbUrlRef.current) URL.revokeObjectURL(glbUrlRef.current);
     const url = URL.createObjectURL(file);
     glbUrlRef.current = url;
+    setIsLoadingModel(true);
     setGlbUrl(url);
+  }, []);
+
+  const handleModelLoaded = useCallback(() => {
+    setIsLoadingModel(false);
   }, []);
 
   const handleClearGlb = useCallback(() => {
@@ -54,7 +61,7 @@ export default function PlaygroundCanvas() {
           gl={{ antialias: true, alpha: false }}
           style={{ background: "#0e0d0c" }}
         >
-          <SceneContent showGrid={showGrid} mode={mode} glbUrl={glbUrl} />
+          <SceneContent showGrid={showGrid} mode={mode} glbUrl={glbUrl} onModelLoaded={handleModelLoaded} />
         </Canvas>
       </div>
       <UIOverlay mode={mode} />
@@ -67,6 +74,7 @@ export default function PlaygroundCanvas() {
         onLoadGlb={handleLoadGlb}
         onClearGlb={handleClearGlb}
       />
+      <LoadingOverlay visible={isLoadingModel} />
       <GrainOverlay />
     </>
   );

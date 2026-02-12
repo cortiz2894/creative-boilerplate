@@ -7,7 +7,8 @@
       "Bash(node -e:*)",
       "Bash(pnpm add:*)",
       "Bash(curl:*)",
-      "Bash(pnpm list:*)"
+      "Bash(pnpm list:*)",
+      "Bash(npx next build:*)"
     ]
   }
 }
