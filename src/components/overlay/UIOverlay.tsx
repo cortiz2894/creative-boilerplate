@@ -15,7 +15,7 @@ export default function UIOverlay({ mode }: { mode: SceneMode }) {
       }}
     >
       <OverlayHeader mode={mode} />
-      <OverlayCornerMarks />
+      {/* <OverlayCornerMarks /> */}
     </div>
   );
 }

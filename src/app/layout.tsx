@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { bebasNeue, barlowCondensed, ibmPlexMono } from "@/components/shared/fonts";
 import "./globals.css";
+import Footer from "@/components/overlay/Footer";
+
 
 export const metadata: Metadata = {
   title: "3D Playground",
@@ -18,6 +20,7 @@ export default function RootLayout({
         className={`${bebasNeue.variable} ${barlowCondensed.variable} ${ibmPlexMono.variable} antialiased`}
       >
         {children}
+        <Footer />
       </body>
     </html>
   );

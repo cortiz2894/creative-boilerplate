@@ -49,6 +49,7 @@ export default function SceneCamera() {
   }, [posX, posY, posZ, camera]);
 
   if ("fov" in camera && camera.fov !== fov) {
+    // eslint-disable-next-line react-hooks/immutability
     camera.fov = fov;
     camera.updateProjectionMatrix();
   }
