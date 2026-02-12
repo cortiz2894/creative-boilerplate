@@ -11,6 +11,10 @@ It includes a fully integrated **3D Playground** to quickly prototype scenes, te
 
 ---
 
+https://github.com/user-attachments/assets/29ded913-6add-4a2f-a7f3-fd42218b4f7b
+
+
+
 ## ✨ What is this?
 
 **Creative Boilerplate** is the exact foundation I use for:
